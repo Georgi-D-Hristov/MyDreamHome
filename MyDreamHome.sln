@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDreamHomeApp", "MyDreamHomeApp\MyDreamHomeApp.csproj", "{53B740BA-50D5-4A4F-94FA-8EAC0664F11B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDreamHomeApp", "MyDreamHomeApp\MyDreamHomeApp.csproj", "{4CCA1F3D-1B63-4AC9-812E-FCD3B049A4E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{53B740BA-50D5-4A4F-94FA-8EAC0664F11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53B740BA-50D5-4A4F-94FA-8EAC0664F11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53B740BA-50D5-4A4F-94FA-8EAC0664F11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53B740BA-50D5-4A4F-94FA-8EAC0664F11B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CCA1F3D-1B63-4AC9-812E-FCD3B049A4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCA1F3D-1B63-4AC9-812E-FCD3B049A4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCA1F3D-1B63-4AC9-812E-FCD3B049A4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCA1F3D-1B63-4AC9-812E-FCD3B049A4E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0348913B-BD12-48CF-AFD7-291BAFAB0902}
+		SolutionGuid = {4F5D4F0B-23E7-4D0B-BB91-E587C007E49D}
 	EndGlobalSection
 EndGlobal

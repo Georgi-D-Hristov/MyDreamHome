@@ -9,7 +9,7 @@ namespace MyDreamHomeApp.Data.Migrations
     using MyDreamHomeApp.Data;
     using System;
 
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(MyDreamHomeDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
