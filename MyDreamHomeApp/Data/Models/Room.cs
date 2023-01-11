@@ -16,4 +16,5 @@
 
         public IEnumerable<Idea> Ideas { get; set; }
     }
+
 }
