@@ -9,16 +9,24 @@
         public int Id { get; init; }
 
         [Required]
-        [MaxLength(NameMaxLength)]
+        [StringLength(
+                  NameMaxLength,
+                  ErrorMessage = "Name should be between {0} and {1} characters."),
+                  MaxLength(NameMaxLength)]
         public string Name { get; set; }
 
         [Required]
         public string Description { get; set; }
+
         [Required]
         public string Drawing { get; set; }
 
-        
-        [MaxLength(TypeMaxLength)]
+
+        [Required]
+        [StringLength(
+           TypeMinLength,
+           ErrorMessage = "Type should be between {0} and {1} characters."),
+           MaxLength(TypeMaxLength)]
         public string Type { get; set; }
 
         public string Address { get; set; }
