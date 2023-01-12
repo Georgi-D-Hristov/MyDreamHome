@@ -17,7 +17,6 @@
 
         public DbSet<Room> Rooms { get; init; }
 
-       // public DbSet<RoomMaterials> RoomMaterials { get; init; }
 
         public MyDreamHomeDbContext(DbContextOptions<MyDreamHomeDbContext> options)
             : base(options)
