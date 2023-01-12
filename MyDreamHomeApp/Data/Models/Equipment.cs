@@ -1,7 +1,7 @@
 ﻿namespace MyDreamHomeApp.Data.Models
 {
     using System.ComponentModel.DataAnnotations;
-
+    using System.ComponentModel.DataAnnotations.Schema;
     using static Data.DataConstants.Equipment;
 
 
@@ -31,6 +31,7 @@
         public string Url { get; set; }
 
         [Range(MinPrice,MaxPrice)]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Price { get; set; }
 
         [Required]

@@ -1,6 +1,8 @@
 ﻿namespace MyDreamHomeApp.Data.Models
 {
+    using Microsoft.EntityFrameworkCore.Metadata.Internal;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using static Data.DataConstants.Matirial;
     public class Matirial
     {
@@ -24,6 +26,7 @@
         public string Type { get; set; }
 
         [Range(MinPrice, MaxPrice)]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Price { get; set; }
         public IEnumerable<RoomMaterials> RoomMaterials { get; set; } = new HashSet<RoomMaterials>();
     }

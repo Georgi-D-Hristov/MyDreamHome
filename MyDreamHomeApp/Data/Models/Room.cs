@@ -1,6 +1,10 @@
 ﻿namespace MyDreamHomeApp.Data.Models
 {
+    using Microsoft.EntityFrameworkCore.Metadata.Internal;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    using static Data.DataConstants.Room;
 
     public class Room
     {
@@ -11,17 +15,22 @@
         public string Description { get; set; }
 
         [Required]
+        [Column(TypeName = "decimal(10,2)")]
+        [Range(MinArea, MaxArea)]
         public decimal Area { get; set; }
 
         public string FloоrType { get; set; }
 
-        public IEnumerable<Matirial> Matirials { get; set; } = new HashSet<Matirial>();
+        public IEnumerable<RoomMaterials> Matirials { get; set; } = new HashSet<RoomMaterials>();
 
         public IEnumerable<Equipment> Equipments { get; set; } = new HashSet<Equipment>();
 
         public IEnumerable<Furniture> Furniture { get; set; } = new HashSet<Furniture>();
 
         public IEnumerable<Idea> Ideas { get; set; } = new HashSet<Idea>();
+
+        public int HomeId { get; init; }
+        public Home Home { get; init; }
     }
 
 }

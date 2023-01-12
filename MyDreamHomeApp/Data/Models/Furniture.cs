@@ -1,7 +1,8 @@
 ﻿namespace MyDreamHomeApp.Data.Models
 {
+    using Microsoft.EntityFrameworkCore.Metadata.Internal;
     using System.ComponentModel.DataAnnotations;
-
+    using System.ComponentModel.DataAnnotations.Schema;
     using static Data.DataConstants.Furniture;
 
     public class Furniture
@@ -19,6 +20,7 @@
         public string Description { get; init; }
 
         [Range(MinPrice, MaxPrice)]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Price { get; set; }
 
         [Required]
