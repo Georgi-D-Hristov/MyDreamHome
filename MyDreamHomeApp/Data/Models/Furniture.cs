@@ -14,10 +14,10 @@
                    NameMaxLength,
                    ErrorMessage = "Name should be between {0} and {1} characters."),
                    MaxLength(NameMaxLength)]
-        public string Name { get; init; }
+        public string? Name { get; init; }
 
         [Required]
-        public string Description { get; init; }
+        public string? Description { get; init; }
 
         [Range(MinPrice, MaxPrice)]
         [Column(TypeName = "decimal(10,2)")]
@@ -25,19 +25,19 @@
 
         [Required]
         [Display(Name = "Image Url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
-        public string Dimentions { get; set; }
+        public string? Dimentions { get; set; }
 
         [Required]
         [StringLength(
             TypeMinLength,
             ErrorMessage = "Type should be between {0} and {1} characters."),
             MaxLength(TypeMaxLength)]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         public int RoomId { get; init; }
 
-        public Room Room { get; init; }
+        public Room? Room { get; init; }
     }
 }

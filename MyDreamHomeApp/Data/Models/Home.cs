@@ -13,13 +13,13 @@
                   NameMaxLength,
                   ErrorMessage = "Name should be between {0} and {1} characters."),
                   MaxLength(NameMaxLength)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [Required]
-        public string Drawing { get; set; }
+        public string? Drawing { get; set; }
 
 
         [Required]
@@ -27,9 +27,9 @@
            TypeMinLength,
            ErrorMessage = "Type should be between {0} and {1} characters."),
            MaxLength(TypeMaxLength)]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
-        public string Address { get; set; }
+        public string? Address { get; set; }
 
         public IEnumerable<Room> Rooms { get; set; } = new HashSet<Room>();
 

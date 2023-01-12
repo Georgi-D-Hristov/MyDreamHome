@@ -11,17 +11,21 @@
         public int Id { get; init; }
 
         [Required]
-        public string Type { get; set; }
-        public string Description { get; set; }
+        [StringLength(
+             TypeMinLength,
+             ErrorMessage = "Type should be between {0} and {1} characters."),
+             MaxLength(TypeMaxLength)]
+        public string? Type { get; set; }
+        public string? Description { get; set; }
 
         [Required]
         [Column(TypeName = "decimal(10,2)")]
         [Range(MinArea, MaxArea)]
         public decimal Area { get; set; }
 
-        public string FloоrType { get; set; }
+        public string? FloоrType { get; set; }
 
-        public IEnumerable<RoomMaterials> Matirials { get; set; } = new HashSet<RoomMaterials>();
+        public IEnumerable<RoomMaterials> RoomMaterials { get; set; } = new HashSet<RoomMaterials>();
 
         public IEnumerable<Equipment> Equipments { get; set; } = new HashSet<Equipment>();
 
@@ -30,7 +34,7 @@
         public IEnumerable<Idea> Ideas { get; set; } = new HashSet<Idea>();
 
         public int HomeId { get; init; }
-        public Home Home { get; init; }
+        public Home? Home { get; init; }
     }
 
 }

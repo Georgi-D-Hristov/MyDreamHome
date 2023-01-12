@@ -14,17 +14,17 @@
                   NameMaxLength,
                   ErrorMessage = "Name should be between {0} and {1} characters."),
                   MaxLength(NameMaxLength)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [Required]
         [Display(Name = "Image Url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
         public int RoomId { get; init; }
 
-        public Room Room { get; init; }
+        public Room? Room { get; init; }
     }
 }

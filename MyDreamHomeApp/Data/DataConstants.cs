@@ -42,6 +42,10 @@
         {
             public const double MaxArea = 1000d;
             public const double MinArea = 0.1d;
+
+            public const int TypeMinLength = 2;
+            public const int TypeMaxLength = 20;
+
         }
 
         public static class Idea

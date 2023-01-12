@@ -14,21 +14,21 @@
             NameMaxLength,
             ErrorMessage = "Name should be between {0} and {1} characters."),
             MaxLength(NameMaxLength)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [Required]
         [StringLength(
             TypeMinLength,
             ErrorMessage = "Type should be between {0} and {1} characters."),
             MaxLength(TypeMaxLength)]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         [Required]
         [Display(Name ="Image Url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
         [Range(MinPrice,MaxPrice)]
         [Column(TypeName = "decimal(10,2)")]
@@ -39,12 +39,11 @@
             BrandMinLength,
             ErrorMessage = "Brand should be between {0} and {1} characters."),
             MaxLength(BrandMaxLength)]
-        public string Brand { get; set; }
+        public string? Brand { get; set; }
 
-       // public string Picture { get; set; }
 
         public int RoomId { get; init; }
 
-        public Room Room { get; init; }
+        public Room? Room { get; init; }
     }
 }
