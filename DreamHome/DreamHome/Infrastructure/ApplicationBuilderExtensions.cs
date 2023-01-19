@@ -14,7 +14,7 @@
             {
                 using (var context = serviceScope.ServiceProvider.GetService<DreamHomeDbContext>())
                 {
-                    context.Database.Migrate();
+                    context?.Database.Migrate();
                 }
             }
             return app;
