@@ -12,11 +12,10 @@
              .GetRequiredService<IServiceScopeFactory>()
              .CreateScope())
             {
-                using (var context = serviceScope.ServiceProvider.GetService<DreamHomeDbContext>())
-                {
-                    context?.Database.Migrate();
-                }
+                using var context = serviceScope.ServiceProvider.GetService<DreamHomeDbContext>();
+                context?.Database.Migrate();
             }
+
             return app;
         }
     }

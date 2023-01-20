@@ -1,6 +1,7 @@
 using DreamHome.Data;
 using DreamHome.Infrastructure;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,35 +22,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 })
     .AddEntityFrameworkStores<DreamHomeDbContext>();
 
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+});
+
 builder.Services.AddControllersWithViews();
-
-//builder.Services.AddAuthentication()
-//   .AddGoogle(options =>
-//   {
-//       IConfigurationSection googleAuthNSection =
-//       config.GetSection("Authentication:Google");
-//       options.ClientId = googleAuthNSection["ClientId"];
-//       options.ClientSecret = googleAuthNSection["ClientSecret"];
-//   })
-//   .AddFacebook(options =>
-//   {
-//       IConfigurationSection FBAuthNSection =
-//       config.GetSection("Authentication:FB");
-//       options.ClientId = FBAuthNSection["ClientId"];
-//       options.ClientSecret = FBAuthNSection["ClientSecret"];
-//   })
-//   .AddMicrosoftAccount(microsoftOptions =>
-//   {
-//       microsoftOptions.ClientId = config["Authentication:Microsoft:ClientId"];
-//       microsoftOptions.ClientSecret = config["Authentication:Microsoft:ClientSecret"];
-//   })
-//   .AddTwitter(twitterOptions =>
-//   {
-//       twitterOptions.ConsumerKey = config["Authentication:Twitter:ConsumerAPIKey"];
-//       twitterOptions.ConsumerSecret = config["Authentication:Twitter:ConsumerSecret"];
-//       twitterOptions.RetrieveUserDetails = true;
-//   });
-
 
 var app = builder.Build();
 
@@ -76,7 +54,5 @@ app
         endpoints.MapDefaultControllerRoute();
         endpoints.MapRazorPages();
     });
-
-
 
 app.Run();
