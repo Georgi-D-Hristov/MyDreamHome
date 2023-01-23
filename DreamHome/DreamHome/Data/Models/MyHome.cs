@@ -10,7 +10,7 @@
 
         [Required]
         [StringLength(
-                  NameMaxLength,
+                  NameMinLength,
                   ErrorMessage = "Name should be between {0} and {1} characters."),
                   MaxLength(NameMaxLength)]
         public string? Name { get; set; }
