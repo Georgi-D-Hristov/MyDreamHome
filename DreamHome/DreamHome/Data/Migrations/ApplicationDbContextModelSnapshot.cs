@@ -63,7 +63,7 @@ namespace DreamHome.Data.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Equipments", (string)null);
+                    b.ToTable("Equipments");
                 });
 
             modelBuilder.Entity("DreamHomeApp.Data.Models.Furniture", b =>
@@ -105,7 +105,7 @@ namespace DreamHome.Data.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Furniture", (string)null);
+                    b.ToTable("Furniture");
                 });
 
             modelBuilder.Entity("DreamHomeApp.Data.Models.Idea", b =>
@@ -136,7 +136,7 @@ namespace DreamHome.Data.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Ideas", (string)null);
+                    b.ToTable("Ideas");
                 });
 
             modelBuilder.Entity("DreamHomeApp.Data.Models.Matirial", b =>
@@ -166,7 +166,7 @@ namespace DreamHome.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Matirials", (string)null);
+                    b.ToTable("Matirials");
                 });
 
             modelBuilder.Entity("DreamHomeApp.Data.Models.MyHome", b =>
@@ -190,8 +190,8 @@ namespace DreamHome.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(2)
+                        .HasColumnType("nvarchar(2)");
 
                     b.Property<string>("Type")
                         .IsRequired()
@@ -200,7 +200,7 @@ namespace DreamHome.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MyHomes", (string)null);
+                    b.ToTable("MyHomes");
                 });
 
             modelBuilder.Entity("DreamHomeApp.Data.Models.Room", b =>
@@ -232,7 +232,7 @@ namespace DreamHome.Data.Migrations
 
                     b.HasIndex("HomeId");
 
-                    b.ToTable("Rooms", (string)null);
+                    b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("DreamHomeApp.Data.Models.RoomMaterials", b =>
@@ -247,7 +247,7 @@ namespace DreamHome.Data.Migrations
 
                     b.HasIndex("MatirialId");
 
-                    b.ToTable("RoomMaterials", (string)null);
+                    b.ToTable("RoomMaterials");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
